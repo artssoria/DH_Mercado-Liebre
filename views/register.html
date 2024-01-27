@@ -4,18 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css/style.css">
+   <!-- Fonts Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   rel="stylesheet" />
     <title>Registro</title>
 </head>
-<body>
-    <section class="form-register">
+<body>   
+    <header>
+        
+        <div id="logo">
+            <a href="/"><img src="/images/logo-mercado-liebre.svg" alt="Logo" height="100px"></a>
+        </div>
+
+       
+        <div id="search-bar">
+            <input type="text" placeholder="Buscar...">
+        </div>
+
+        <div id="buy-message">
+            <i class="fa-solid fa-hand-holding-dollar"></i>
+            <p>Comprá en cuotas y sin tarjeta de crédito</p>
+        </div>
+        <div class="menu-toggle"> <i class="fa-solid fa-bars"></i> </div>
+       
+        <nav>
+            <ul>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+                <li><i class="fa-regular fa-address-card"></i><a href="/register"> Creá tu cuenta</a></li>
+                <li><i class="fa-solid fa-right-to-bracket"></i><a href="#"> Ingresá</a></li>
+                <li><i class="fa-solid fa-basket-shopping"></i><a href="#"> Mis compras</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- formulario -->
+    <form class="form-register" action="/register" method="post">
         <h4>Registrate</h4>
-        <input class="controls" type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Ingrese su nombre y apellido">
-        <input class="controls" type="text" name="usuario" id="usuario" placeholder="ingrese su usuario">
-        <input class="controls" type="email" name="email" id="email" placeholder="Ingrese su correo electrónico">
-        <input type="date" name="fecha-nac" id="fecha-nac">
-        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese una contraseña">
-        <input class="button" type="submit" value="Registrar">
-        <p><a href="#">¿Ya tienes cuenta?</a></p>
-    </section>    
+        <label for="nombre">Nombre y apellido:</label><br>
+        <input type="text" id="nombre" name="nombre" class="controls" required><br>
+        <label for="usuario">Nombre de usuari@:</label><br>
+        <input type="text" id="usuario" name="usuario" class="controls" required><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" class="controls" required><br>
+        <label for="fecha">Fecha de nacimiento:</label><br>
+        <input type="date" id="fecha" name="fecha" class="controls" required><br>
+        <label for="domicilio">Domicilio:</label><br>
+        <input type="text" id="domicilio" name="domicilio" class="controls" required><br>
+        <label for="perfil">Perfil del usuario:</label><br>
+        <select id="perfil" name="perfil" class="controls" required>
+            <option value="comprar">Comprar</option>
+            <option value="vender">Vender</option>
+        </select><br>
+        <label for="categorias">Categorías de interés:</label><br>
+        <input type="checkbox" id="electro" name="categorias" value="Electro" class="controls">
+        <label for="electro"> Electro</label><br>
+        <input type="checkbox" id="moda" name="categorias" value="Moda" class="controls">
+        <label for="moda"> Moda</label><br>
+        <input type="checkbox" id="hogar" name="categorias" value="Hogar" class="controls">
+        <label for="hogar"> Hogar</label><br>
+        <input type="checkbox" id="juguetes" name="categorias" value="Juguetería" class="controls">
+        <label for="juguetes"> Juguetería</label><br>
+        <input type="checkbox" id="vida" name="categorias" value="Vida sana" class="controls">
+        <label for="vida"> Vida sana</label><br>
+        <label for="foto">Foto de usuario:</label><br>
+        <input type="file" id="foto" name="foto" class="controls"><br>
+        <label for="pwd">Contraseña:</label><br>
+        <input type="password" id="pwd" name="pwd" class="controls" required><br>
+        <label for="confirmPwd">Confirmar contraseña:</label><br>
+        <input type="password" id="confirmPwd" name="confirmPwd" class="controls" required><br>
+        <input type="submit" value="Enviar" class="controls enviar">
+        <input type="reset" value="Borrar" class="controls borrar">
+    </form>
+    
+    <script src="/js/pass-verifi.js"></script>
+    <script src="https://kit.fontawesome.com/4b70587972.js" crossorigin="anonymous"></script>
 </body>
 </html>

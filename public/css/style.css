@@ -1,3 +1,5 @@
+/* Fuente Roboto importada */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* Estilos generales */
 *{
     margin: 0;
@@ -5,7 +7,7 @@
     box-sizing: border-box;
 }
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
